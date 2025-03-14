@@ -1,106 +1,72 @@
+/* Global Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
-  color: #333;
-  line-height: 1.6;
+    background-color: white;
+    color: #1a1a1a;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px 50px;
-  z-index: 100;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #001f3f; /* Dark Blue */
 }
 
 .navbar .logo h1 {
-  color: gold;
-  font-size: 2rem;
+    color: gold;
 }
 
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
+.nav-links {
+    list-style: none;
+    display: flex;
 }
 
-.navbar .nav-links li {
-  margin-left: 20px;
+.nav-links li {
+    margin: 0 15px;
 }
 
-.navbar .nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 5px 10px;
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
 .hero {
-  background: url('hero-image.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    height: 500px;
+    background: url('https://via.placeholder.com/1400x500?text=Luxury+Hero+Image') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-.hero-text h1 {
-  color: white;
-  font-size: 3rem;
-}
-
-.hero-text p {
-  color: white;
-  font-size: 1.5rem;
-  margin-top: 10px;
+.hero h1 {
+    font-size: 3rem;
 }
 
 .hero .btn {
-  background-color: gold;
-  color: #000;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+    padding: 10px 20px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-.product-showcase {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 0;
-}
-
-.product {
-  text-align: center;
-  max-width: 300px;
-}
-
-.product img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.product h3 {
-  color: #000;
-  margin-top: 10px;
-}
-
+/* Footer */
 footer {
-  background-color: #111;
-  color: white;
-  padding: 30px;
-  text-align: center;
+    background: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-footer a {
-  color: gold;
-  text-decoration: none;
-  margin-right: 15px;
-}
