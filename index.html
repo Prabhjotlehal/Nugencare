@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nugencare - Luxury Skincare</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- For Pop-up Animations -->
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1><span>Nugencare</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Welcome to Nugencare</h1>
+        <p>Luxurious skincare for your glowing beauty</p>
+        <a href="products.html" class="btn">Shop Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category Links Section -->
+  <section class="categories">
+    <h2 class="section-title">Explore Our Categories</h2>
+    <div class="category-links">
+      <a href="products.html?category=skincare" class="category-link">Skincare</a>
+      <a href="products.html?category=haircare" class="category-link">Hair Care</a>
+      <a href="products.html?category=bathbody" class="category-link">Bath & Body</a>
+      <a href="products.html?category=essentialoils" class="category-link">Essential Oils</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Nugencare. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Pop-up on page load (for premium experience)
+    window.onload = function() {
+      Swal.fire({
+        title: 'Welcome to Nugencare!',
+        text: 'Enjoy luxury skincare and shop our premium products.',
+        icon: 'success',
+        confirmButtonText: 'Shop Now',
+      })
+    };
+  </script>
+</body>
+</html>
