@@ -5,66 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nugencare - Luxury Skincare</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- For Pop-up Animations -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.10.0/dist/gsap.min.js"></script> <!-- GSAP for animation -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> <!-- AOS for scroll animations -->
 </head>
 <body>
-  <!-- Header -->
+  <!-- Navigation -->
   <header>
     <nav class="navbar">
-      <div class="logo">
-        <h1><span>Nugencare</span></h1>
-      </div>
+      <div class="logo"><h1>Nugencare</h1></div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Shop</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Welcome to Nugencare</h1>
-        <p>Luxurious skincare for your glowing beauty</p>
-        <a href="products.html" class="btn">Shop Now</a>
-      </div>
-    </div>
   </header>
 
-  <!-- Category Links Section -->
-  <section class="categories">
-    <h2 class="section-title">Explore Our Categories</h2>
-    <div class="category-links">
-      <a href="products.html?category=skincare" class="category-link">Skincare</a>
-      <a href="products.html?category=haircare" class="category-link">Hair Care</a>
-      <a href="products.html?category=bathbody" class="category-link">Bath & Body</a>
-      <a href="products.html?category=essentialoils" class="category-link">Essential Oils</a>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Welcome to Nugencare</h1>
+      <p>Luxury skincare for your glowing beauty</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section class="product-showcase">
+    <div class="product" data-aos="fade-up">
+      <img src="product1.jpg" alt="Product 1">
+      <h3>Passion Fruit & Thyme Body Lotion</h3>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+    <div class="product" data-aos="fade-up">
+      <img src="product2.jpg" alt="Product 2">
+      <h3>Ginger & Rose Body Lotion</h3>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+    <div class="product" data-aos="fade-up">
+      <img src="product3.jpg" alt="Product 3">
+      <h3>Curcumin & Honey Body Lotion</h3>
+      <a href="shop.html" class="btn">Shop Now</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Nugencare. All rights reserved.</p>
-      <nav>
-        <ul>
-          <li><a href="terms-of-service.html">Terms of Service</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
+    <div class="footer-links">
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
     </div>
+    <p>&copy; 2025 Nugencare</p>
   </footer>
 
   <script>
-    // Pop-up on page load (for premium experience)
-    window.onload = function() {
-      Swal.fire({
-        title: 'Welcome to Nugencare!',
-        text: 'Enjoy luxury skincare and shop our premium products.',
-        icon: 'success',
-        confirmButtonText: 'Shop Now',
-      })
-    };
+    // GSAP Animation Example
+    gsap.from(".hero-text h1", { opacity: 0, duration: 2, y: -50 });
+    gsap.from(".hero-text p", { opacity: 0, duration: 2, y: 50, delay: 0.5 });
+
+    // Initialize AOS (scroll animations)
+    AOS.init();
   </script>
 </body>
 </html>
