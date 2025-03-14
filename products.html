@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop - Nugencare</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Nugencare</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo"><h1>Nugencare</h1></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><h1>Nugencare</h1></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Product List Section -->
-  <section class="product-list">
-    <div class="container">
-      <div class="product">
-        <img src="assets/images/product1.jpg" alt="Product 1">
-        <h3>Passion Fruit & Thyme Body Lotion</h3>
-        <p>Hydrating and refreshing body lotion with tropical essence.</p>
-        <a href="product-detail.html" class="btn">View Details</a>
-      </div>
-      <div class="product">
-        <img src="assets/images/product2.jpg" alt="Product 2">
-        <h3>Ginger & Rose Body Lotion</h3>
-        <p>Calming ginger and rose lotion for smooth, hydrated skin.</p>
-        <a href="product-detail.html" class="btn">View Details</a>
-      </div>
-      <div class="product">
-        <img src="assets/images/product3.jpg" alt="Product 3">
-        <h3>Curcumin & Honey Body Lotion</h3>
-        <p>Brightening body lotion for glowing skin with honey and curcumin.</p>
-        <a href="product-detail.html" class="btn">View Details</a>
-      </div>
-    </div>
-  </section>
+    <section>
+        <h2>Our Products</h2>
+        <div class="filters">
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('skin')">Skin Care</button>
+            <button onclick="filterProducts('hair')">Hair Care</button>
+            <button onclick="filterProducts('bath')">Bath & Body</button>
+            <button onclick="filterProducts('essential')">Essential Oils</button>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-links">
-      <a href="terms-of-service.html">Terms of Service</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-    </div>
-    <p>&copy; 2025 Nugencare</p>
-  </footer>
+        <div class="product-list">
+            <div class="product" data-category="skin">
+                <img src="https://via.placeholder.com/200" alt="Product">
+                <h3>Luxury Skin Cream</h3>
+                <p>Premium hydrating cream.</p>
+            </div>
+            <div class="product" data-category="hair">
+                <img src="https://via.placeholder.com/200" alt="Product">
+                <h3>Hair Revitalizing Oil</h3>
+                <p>Strengthens and nourishes hair.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function filterProducts(category) {
+            let products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                if (category === 'all' || product.getAttribute('data-category') === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
